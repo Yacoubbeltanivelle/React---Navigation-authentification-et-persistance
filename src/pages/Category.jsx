@@ -1,10 +1,10 @@
 import { useParams } from "react-router";
 
 function Category() {
-  const { categoriId } = useParams();
+  const { categoryId } = useParams();
   return (
     <div>
-      <h1>Détails du blog avec l'ID : {categoriId}</h1>
+      <h1>Détails du blog avec l'ID : {categoryId}</h1>
     </div>
   );
 }
