@@ -7,28 +7,19 @@ import "../assets/Header.css";
 function Header() {
   return (
     <header>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg lo" className="bg-body-tertiary">
         <Container>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <NavLink
-                to="/"
-                className={({ isActive }) => (isActive ? "active" : "nav-link")}
-              >
+              <Nav.Link as={NavLink} to="/">
                 Accueil
-              </NavLink>
-              <NavLink
-                to="/category/vetements"
-                className={({ isActive }) => (isActive ? "active" : "nav-link")}
-              >
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/category/vetements">
                 Vêtements
-              </NavLink>
-              <NavLink
-                to="/category/chaussures"
-                className={({ isActive }) => (isActive ? "active" : "nav-link")}
-              >
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/category/chaussures">
                 Chaussures
-              </NavLink>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

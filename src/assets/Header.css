@@ -1,3 +1,4 @@
-.active {
+.nav-link.active {
     text-decoration: underline;
+    color: brown;
 }
