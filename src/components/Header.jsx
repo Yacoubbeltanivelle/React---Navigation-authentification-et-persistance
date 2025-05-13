@@ -1,7 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
+import "../assets/Header.css";
 
 function Header() {
   return (
@@ -10,15 +11,24 @@ function Header() {
         <Container>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "nav-link")}
+              >
                 Accueil
-              </Nav.Link>
-              <Nav.Link as={Link} to="/category/vetements">
+              </NavLink>
+              <NavLink
+                to="/category/vetements"
+                className={({ isActive }) => (isActive ? "active" : "nav-link")}
+              >
                 Vêtements
-              </Nav.Link>
-              <Nav.Link as={Link} to="/category/chaussures">
+              </NavLink>
+              <NavLink
+                to="/category/chaussures"
+                className={({ isActive }) => (isActive ? "active" : "nav-link")}
+              >
                 Chaussures
-              </Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
